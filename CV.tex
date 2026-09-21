@@ -18,8 +18,20 @@
 \usepackage[a4paper,left=1.2cm,right=1.2cm,top=1.5cm,bottom=1cm,nohead]{geometry}
 \usepackage{titlesec}
 
-\setmainfont{Times New Roman}
-\setCJKmainfont{Noto Sans CJK SC}
+%% 主文档字体设置
+\setmainfont[
+    Path = fonts/Main/,
+    Extension = .otf,
+    BoldFont = texgyretermes-bold.otf
+]{texgyretermes-regular.otf}
+
+
+%% 中文字体设置
+\setCJKmainfont[
+    Path = fonts/hansans/,
+    Extension = .ttf,
+    BoldFont = NotoSansSC-Bold.ttf
+]{NotoSansSC-Regular.otf}
 
 \setlist[itemize]{noitemsep,topsep=0.25em,leftmargin=*}
 
