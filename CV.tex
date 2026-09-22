@@ -5,8 +5,6 @@
 \usepackage{xltxtra}
 \usepackage{hyperref}
 \hypersetup{hidelinks}
-\usepackage{url}
-\urlstyle{tt}
 \usepackage{xcolor}
 \definecolor{CVBlue}{RGB}{23,110,191}
 \usepackage{calc}
@@ -19,21 +17,18 @@
 \CJKsetecglue{}
 
 \setmainfont[
-    Path = fonts/Main/,
-    Extension = .otf,
-    BoldFont = texgyretermes-bold.otf
+Path=fonts/Main/,
+Extension=.otf,
+BoldFont=texgyretermes-bold.otf
 ]{texgyretermes-regular.otf}
 
 \setCJKmainfont[
-    Path = fonts/hansans/,
-    Extension = .ttf,
-    BoldFont = NotoSansSC-Bold.ttf
+Path=fonts/hansans/,
+Extension=.ttf,
+BoldFont=NotoSansSC-Bold.ttf
 ]{NotoSansSC-Regular.otf}
 
-\usepackage{relsize}
-\usepackage{xspace}
 \usepackage{fontawesome}
-
 \usepackage[
 a4paper,
 left=1.2cm,
@@ -46,14 +41,14 @@ nohead
 \renewcommand{\baselinestretch}{1.18}
 
 \usepackage{titlesec}
-\setlist{noitemsep}
-\setlist[itemize]{topsep=0.15em,leftmargin=*}
+\setlist[itemize]{noitemsep,topsep=0.15em,leftmargin=*}
 
 \titleformat{\section}
 {\large\bfseries\raggedright}
 {}{0em}
 {}
 [{\color{CVBlue}\titlerule}]
+
 \titlespacing*{\section}{0cm}{*1.25}{*0.8}
 
 \begin{document}
@@ -62,107 +57,136 @@ nohead
 \begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north east] at ($(current page.north east)+(-2cm,-1.2cm)$)
 {\includegraphics[height=3cm]{avatar.jpg}};
-\end{tikzpicture}
-
-\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west] at ($(current page.north west)+(0.5cm,+1.0cm)$)
+\node[anchor=north west] at ($(current page.north west)+(0.5cm,1cm)$)
 {\includegraphics[height=5.5cm]{zju.png}};
 \end{tikzpicture}
 
 \centerline{\LARGE\bfseries 陈浩然}
 
 \centerline{\normalsize{
-\faPhone\ 15964026329\quad
-\faEnvelopeO\ \href{mailto:Chenhr1221@zju.edu.cn}{Chenhr1221@zju.edu.cn}
-\quad 籍贯：山东济南}}
+\faPhone\ 15964026329 \quad
+\faEnvelopeO\ Chenhr1221@zju.edu.cn \quad
+籍贯：山东济南
+}}
 
-\vspace{-0.2em}
+\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育经历}
 
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}
-
-\textbf{浙江大学 工程师学院}
+\textbf{浙江大学（985/211/双一流） 工程师学院}
 \hfill 2025.09 -- 至今
 
-城市工程系统可持续项目 硕士研究生
+土木水利专业 工程硕士在读
 
 \begin{itemize}
 \item 研究方向：\textbf{工程结构安全、多灾种动力响应、数值模拟与工程数据分析}
 \end{itemize}
 
-\textbf{合肥工业大学（211/双一流） 土木与水利工程学院}
+\textbf{合肥工业大学（211/双一流） 城市地下空间工程}
 \hfill 2021.09 -- 2025.06
 
-城市地下空间工程专业
+工学学士
 
 \begin{itemize}
-\item 专业综合排名：\textbf{11/249（前5\%）}，GPA：3.66/4.30，CET-6：457。
-\item 主修课程：材料力学、弹性力学及有限元法、结构设计方法、概率论与数理统计。
+\item GPA：3.66/4.30，专业排名：\textbf{11/249（前5\%）}
+\item 荣誉：全国大学生测绘学科创新创业智能大赛一等奖；全国周培源大学生力学竞赛二等奖。
 \end{itemize}
 
 
-\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 科研与项目经历}
+\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
-\textbf{国家重点研发计划项目课题：强震和极端气候作用下灾害链动力学机制与对水电工程的影响预测}
+\textbf{国家重点研发计划项目：
+强震和极端气候作用下灾害链动力学机制与对水电工程的影响预测}
 \hfill 2025.09 -- 至今
 
 项目成员
 
 \begin{itemize}
-\item 面向极端环境下工程灾害风险问题，开展\textbf{多灾种灾害链演化机制与动力响应分析}研究。
-\item 基于\textbf{多源数据融合、Python数据处理与空间分析方法}，构建灾害演化数据库，开展工程风险因素分析。
-\item 基于\textbf{3DEC离散元方法}开展三维数值模型构建，分析岩体结构响应及失稳演化过程。
-\item 发明专利：\textbf{一种冰川灾害链物源识别与动态供源评价方法及系统}（第二发明人）。
 
+\item \textbf{项目背景：}
+针对高山峡谷区强震与极端气候共同作用下工程灾害风险问题，
+开展\textbf{多灾种灾害链演化机制、动力响应及风险预测}研究。
+
+\item \textbf{主要工作：}
+基于\textbf{Python、多源数据融合与空间统计方法}，
+构建灾害演化数据库；
+利用\textbf{3DEC离散元方法}建立三维数值模型，
+开展岩体结构响应、破坏过程及影响因素分析。
+
+\item \textbf{项目成果：}
+参与发明专利
+\textbf{一种冰川灾害链物源识别与动态供源评价方法及系统}
+（第二发明人）。
 \end{itemize}
 
-\textbf{省级大学生创新创业训练计划：大学力学课程辅助学习系统开发}
+
+\textbf{省级大学生创新创业训练计划：
+大学力学课程辅助学习系统开发}
 \hfill 2023.05 -- 2024.05
 
 核心成员
 
 \begin{itemize}
-\item 基于\textbf{MATLAB App Designer}开发力学课程辅助学习平台，实现知识点检索、典型例题管理及交互式学习功能。
-\item 负责软件功能设计与界面开发，项目成果获得挑战杯校赛三等奖、互联网+校级铜奖，并完成软件著作权登记。
+
+\item \textbf{项目背景：}
+针对工程力学课程学习过程中知识检索与辅助训练需求，
+开发交互式课程辅助学习系统。
+
+\item \textbf{主要工作：}
+基于\textbf{MATLAB App Designer}完成软件界面设计、
+功能模块开发及数据管理，实现典型例题管理、知识点检索等功能。
+
+\item \textbf{项目成果：}
+获得挑战杯校赛三等奖、互联网+校级铜奖，
+并完成软件著作权登记。
 \end{itemize}
 
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 工程实践经历}
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 实践经历}
 
-\textbf{中交建筑集团第九工程有限公司}
+\textbf{中交建筑集团第九工程有限公司 项目技术岗实习生}
 \hfill 2024.06 -- 2024.09
 
-项目技术岗实习生
-
 \begin{itemize}
-\item 参与房建项目技术管理工作，负责施工图纸整理、工程资料处理及项目技术支持。
-\item 使用\textbf{AutoCAD、BIM}开展工程模型构建、图纸处理及数字化辅助分析。
+\item 参与房建项目技术管理工作，负责\textbf{施工图纸审核、技术资料整理及现场技术支持}。
+\item 基于\textbf{AutoCAD、BIM}开展工程模型构建、图纸深化及数字化辅助分析，提高工程协同效率。
 \end{itemize}
 
 
-\section{\makebox[\widthof{\faList}][c]{\color{CVBlue}\faList}\ 荣誉奖励}
+\textbf{长江岩土工程有限公司 地质灾害数据分析实习生}
+\hfill 2026.06 -- 2026.09
 
 \begin{itemize}
-\item 全国大学生测绘学科创新创业智能大赛——无人机航测虚拟仿真 \textbf{一等奖}
-\item 第十四届全国周培源大学生力学竞赛（安徽赛区）\textbf{二等奖}
-\item 2023年高教社杯全国大学生数学建模竞赛（安徽赛区）\textbf{三等奖}
-\item 第五届“设计总院杯”安徽省大学生桥梁设计大赛\textbf{一等奖}
+\item 参与\textbf{强震与极端气候作用下地质灾害链易发性分析}，
+开展灾害数据库构建、多源数据整理及空间分析工作。
 \end{itemize}
 
 
-\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 学生工作经历}
+\section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 学生工作}
 
 \begin{itemize}
-\item 浙江大学研究生资助发展中心奖誉部干事（2025.09 -- 2026.08）；浙江大学工程师学院城市工程系统可持续项目生活委员、心理委员（2025.09 -- 至今）。
+\item 浙江大学研究生资助发展中心 主任 \hfill 2026.08 -- 至今
+\item 浙江大学工程师学院城市工程系统可持续项目 生活委员、心理委员 \hfill 2025.09 -- 至今
+\item 合肥工业大学城市建设工程系团委办公室副部长 \hfill 2022.09 -- 2023.09
+\item 合肥工业大学城市地下空间工程21-5班 学习委员 \hfill 2024.09 -- 2025.06
 \end{itemize}
 
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术技能}
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 个人总结}
 
 \begin{itemize}
-\item \textbf{CAE与数值模拟：}ANSYS有限元分析（FEA）、3DEC离散元模拟、MATLAB数值计算。
-\item \textbf{工程设计与建模：}AutoCAD、BIM建模、工程数字化建模。
-\item \textbf{编程与数据分析：}Python、SQL、Git、数据处理与可视化。
-\item \textbf{GIS与遥感：}ArcGIS Pro、多源数据处理、空间统计分析。
+
+\item 掌握\textbf{ANSYS有限元分析（FEA）、3DEC离散元模拟、MATLAB}，
+具备工程仿真、数值计算与模型分析能力。
+
+\item 熟悉\textbf{Python、SQL、Git、PyTorch}，
+具备数据处理、算法开发与机器学习模型训练基础。
+
+\item 熟悉\textbf{Linux环境、Docker容器化工具}，
+具备工程计算环境配置与开发能力。
+
+\item 熟练使用\textbf{AutoCAD、BIM、ArcGIS Pro}，
+开展工程建模、空间分析与数据可视化。
+
+\item CET-6，计算机二级。
 \end{itemize}
 
 \end{document}
